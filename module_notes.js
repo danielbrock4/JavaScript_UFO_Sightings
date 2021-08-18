@@ -183,8 +183,11 @@ numbers.forEach(function(element) {
 });    
 
 
-// d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML 
-//webpage adds interactive functionality, such as when users click a button to filter a table
+// d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML webpage adds interactive functionality, 
+// such as when users click a button to filter a table
+    // A "click" isn't the only event that D3.js can listen for—there are a variety of actions that can be listened for and handled. 
+    //  For example, a tooltip displays when you place your mouse over a specific element on a webpage.
+    // Events aren't limited to mouse events, either. They can include keyboard, text composition, forms—the list is lengthy and some of the events are quite advanced.
 
 // If Statements
     // Much like in Python, an if statement in JavaScript will check for conditions before executing the code

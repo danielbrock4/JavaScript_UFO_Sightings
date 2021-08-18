@@ -79,7 +79,10 @@ function buildTable(data) {
         // === The triple equal signs test for stricted equality, meaning that the date in the table has to match our filter exactly and perfecttly. == would be loose equality 
 // Call Previous function to build table
     // Step 5. buildTable(filterData) we are passing in our filteredData variable as our argument so that only the data that matches the filter is displayed. 
-    //            
+    // Step 6. Use d3 to listen for events that occur on a webpage, such as a button click. 
+        // 6a. Our selector string contains the id for another HTML tag. (We'll assign a unique id to a button element in the HTML called "filter-btn".)  By adding this, we're linking our code directly to the filter button
+        // 6b. .on("click", handleClick); tells D3 to execute our handleClick() function when the button with an id of filter-btn is clicked.
+    // Step 7. Build the table when the page loads it will create a basic table filled with row upon row of unfiltered data pulled straight from our array          
 function handleClick() {
     // Grab the datetime value from the filter
     let date = d3.select("datatime").property("value");
@@ -91,9 +94,10 @@ function handleClick() {
     };
     // Rebuild the table using the filtered data. @NOTE: If no date was entered, then filteredData will just be the original tableData.
     buildTable(filterData)
+};    
 // Attach an event to listen for the form button
-
+d3.selectAll("#filter-btn").on("click", handleClick);
 //  Build the table when the page loads
-};
+buildTable(tableData);
 
 
