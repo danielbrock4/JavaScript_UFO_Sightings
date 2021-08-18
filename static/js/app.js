@@ -20,7 +20,7 @@ const tableData = data;
     // 1. Declare a variable, tbody 
         // tbody is an example of standard table tag that is used often in HTML, with or without JavaScript enhancements.
     // 2. Use "d3.select" to tell JavaScript to look for the <tbody> tags in the HTML
-        // d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML webpage.
+        // d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML webpage adds interactive functionality, such as when users click a button to filter a table
             // It is often used by data professionals to create dashboards, or a collection of visual data (such as graphs and maps), for presentation.      
 var tbody = d3.select('tbody');
 
@@ -45,10 +45,10 @@ var tbody = d3.select('tbody');
         // 3.e.2 Adding (dataRow) as the argument says that we want the values to go into the dataRow.
         // 3.e.3 forEach((val) specifies that we want one object per row telling our code put each sighting onto its own row of data
             // 3.e.2.a The "val" argument represents each item in the object, such as the location, shape, or duration.
-            // 3.e.2.b Append each value of the object to a cell in the table by creating a variable cell to append data into a table data tag (<td>) 
+            // 3.e.2.b Append each value of the object to a cell in the table by creating a variable cell to append data into a table data tag (<td>)
             // 3.e.2.c Chain .text(value) to the variable cell, we are extracting only the text of the value.
 function buildTable(data) {
-// First, clear out any existing data
+            // First, clear out any existing data
     tbody.html("");        
     // Next, loop through each object in the data and append a row and cells for each value in the row
     data.forEach((dataRow) => {
@@ -61,4 +61,39 @@ function buildTable(data) {
             }
         );
     });
-};     
+}; 
+// Add Filters
+// D3 library(adds highly dynamic graphics in an HTML) to add button to our HTML page to filter the table. d3 listens for the button is clicked, detect the click & react accordingly. 
+    // Step 1: Create standard function using the traditional syntax followed by the name of the function, opening and closing parentheses, and curly brackets. 
+    // Step 2: Add a date function, we need to create a couple of variables to hold our date data, both filtered and unfiltered.
+        // 2.a .select() will select the very first element that matches our selector string: "#datetime". The selector string is the item we're telling D3.js to look for.
+        // 2.b d3.select("#datetime") tells D3 to look for the #datetime id in the HTML tags. We haven't created our HTML yet, but we know that the date value 
+        // will be nested within tags that have an id of "datetime."
+        // 3.c Chain.property("value") to the d3.select function tells d3 not only to look for where our date values are stored on the webpage, but to grab that info 
+        // & hold it in the "date" variable.
+    // Step 3: Set default filter & save it to a new variable. Use TableData original because table data because we want users to refine their search on their own terms
+        // By setting the filteredData variable to our raw data, we're basically using it as a blank slate. The function we're working on right now 
+        // will be run each time the filter button is clicked on the website. If no date has been entered as a filter, then all of the data will be returned instead.
+// If Statement to Filter Date [if (condition){code to execute}] or pseudocode [if (a date is entered) {Filter the default data to show only the date entered};]
+    // Step 4: Apply a filter method taht will match the dateime value to filtered date vaule "Show only the rows where the date is equal to the date filter we created above."
+        // === The triple equal signs test for stricted equality, meaning that the date in the table has to match our filter exactly and perfecttly. == would be loose equality 
+// Call Previous function to build table
+    // Step 5. buildTable(filterData) we are passing in our filteredData variable as our argument so that only the data that matches the filter is displayed. 
+    //            
+function handleClick() {
+    // Grab the datetime value from the filter
+    let date = d3.select("datatime").property("value");
+    let filterData = tableData; // calls imported data from data.js
+    // Check to see if a date was entered and filter the data using that date.
+    if (date) {
+        // Apply `filter` to the table data to only keep the rows where the `datetime` value matches the filter value        
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+    // Rebuild the table using the filtered data. @NOTE: If no date was entered, then filteredData will just be the original tableData.
+    buildTable(filterData)
+// Attach an event to listen for the form button
+
+//  Build the table when the page loads
+};
+
+

@@ -181,3 +181,16 @@ let numbers = [1,2,3,4,5,6]; // array of numbers
 numbers.forEach(function(element) {
     console.log(elements**2);
 });    
+
+
+// d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML 
+//webpage adds interactive functionality, such as when users click a button to filter a table
+
+// If Statements
+    // Much like in Python, an if statement in JavaScript will check for conditions before executing the code
+// if-statement syntax
+// if ( condition ) { code to execute }   
+
+// Equal signs 
+    // === A triple equal sign (===) is checking for strict equality. This means that the type and value have to match perfectly.
+    // == A double equals sign (==) is checking for loose equality. This means that the type and value are loosely matched. 
