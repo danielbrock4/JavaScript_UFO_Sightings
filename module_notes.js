@@ -70,7 +70,7 @@ var data = [ // data is the Array
 // Functions 
     // Store some kind of logic that used over again so we dont have rewrite the same type of code over again
     // Step 1: Use the keyword function to create a function
-    // Step 2: name funcion after "function" and add parenthesis 
+    // Step 2: name funcion after "function" and add parenthesis. Typically, functions are named after what they do.  
         // () parathesis hold the parameters you want to use in the function. Parameters are  placeholders for the values we will add later,
         // IMPORTANT: However, from a practical standpoint, it's not a good idea to have more than two parameters per function. 
             // Too many arguments can significantly slow down and even crash your code.
@@ -93,8 +93,9 @@ function doubleAddition(c, d) {
 
 // clear() 
     // If the code and output in your console is getting cluttered, type clear() and press Enter to clear the working area of your console.
-    //Once cleared, you won't be able to see the code anymore, but you can still access what you've written by using the up arrow key on your keyboard. 
+    // Once cleared, you won't be able to see the code anymore, but you can still access what you've written by using the up arrow key on your keyboard. 
     // This allows you to cycle through the different lines of code you've already executed.
+    // Clearing existing data is important because we’ll be appending data from the array in the following code. Without clearing it, the users will end up with pre-filtered data.
 
 // Arrow Functions
     // Arrow functions complete the same functions as regular functions, but they use a more compact and concise syntax that makes a code script shorter and easier to read 
@@ -140,7 +141,7 @@ let friends = ["Sarah", "Greg", "Cindy", "Jeff"];
   // This is how you know that you've successfully executed the line of code and the array has been saved locally.
   // As soon as you press Enter, the words "undefined" will appear directly below your line of code. This is how you know that you've successfully executed the line of code and the array has been saved locally.
 
-// Step 1: Create a function, name it and add parameters in ()
+// Step 1: Create a function, name it and add parameters in (). Typically, functions are named after what they do.
 // Step 2: Create for loop using 'for' this keyword for is the trigger that indicates we'll be iterating through a list
 // Step 3: When the length of i is equal to the total number of items in the list, the for loop will complete its iterations and the next line of code will be executed
     // 3a. var i = 0 We assign an iterable variable and set its value to zero. In this loop, think of the letter 'i' to mean 'iterate.' 
@@ -168,3 +169,5 @@ function listLoop(userList) {
  for (var i = 0; i < vegetables.length; i++) {
      console.log("I love " + vegetables[i]);
  };
+ 
+// Creating self-contained code makes it easier to reuse the code and keeps us organized: 

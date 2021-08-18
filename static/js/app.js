@@ -22,4 +22,14 @@ const tableData = data;
     // 2. Use "d3.select" to tell JavaScript to look for the <tbody> tags in the HTML
         // d3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML webpage.
             // It is often used by data professionals to create dashboards, or a collection of visual data (such as graphs and maps), for presentation.      
-var tbody = d3.select('tbody');            
+var tbody = d3.select('tbody');
+
+// Iterate through the array of objects in our data file and then append them to a table row. All of this will happen within a function, which makes the code self-contained.
+    // Creating self-contained code makes it easier to reuse the code and keeps us organized: the code in this function will be used to fill the table with data only.
+
+// Step 1: Create a function, name it and add parameters in (). Typically, functions are named after what they do. We're building a table, so we'll name the function "buildTable."
+    // 1.a () parathesis hold the parameters in the function. We'll also pass in "data" as the argument parameter, which was assigned earlier = const tableData = data; 
+
+function buildTable(data) {
+
+};     
