@@ -30,6 +30,7 @@ console.log("hello world");
     // var - Pre ES6. Does not need to be in a block. Var is is global, meaning it applies to the program instead of being contained in a block of code.
         // In Javascipt you need to add var before the variable, and then add a semicolon after the value, like this: var y = 2; 
         // In Javascipt, a vrable is assiged by first declaring it. Complete fo state is indicated by semicolon
+        // It's more appropriate to use var when we want the variable to be available globally, or throughout all of the code.
 var y = 2;
 console.log(y);
     // let & const - Post ES6. Need to be in a block {}. If you called a variable outside those brases you would get an error.  So could use the same varible in and outside the braces but the could equal different things.
@@ -171,3 +172,12 @@ function listLoop(userList) {
  };
  
 // Creating self-contained code makes it easier to reuse the code and keeps us organized: 
+
+// forEach
+    // Use a forEach function, which loops through the array in the same way as a for loop. This callback function will performed on each element in the array
+    // The difference is that forEach works only with arrays
+    // Another benefit is that forEach can be combined with an arrow function, once again making the code more concise and easy to read.
+let numbers = [1,2,3,4,5,6]; // array of numbers
+numbers.forEach(function(element) {
+    console.log(elements**2);
+});    
