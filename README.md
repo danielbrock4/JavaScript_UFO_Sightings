@@ -1,7 +1,7 @@
 # Module 11 Using Javascipt to Create UFO Sightings Webpage
 ## Resources
 
-- **Data Source:** [data.js](static_challenge\js\data.js)
+- **Data Source:** [data.js](\static_challenge\js/data.js)
 - **Software:** Visual Studio Code, JavaScipt, HTML, CSS, D3, Bootstrap
 
 ## Challenge Project Overview
