@@ -14,7 +14,7 @@ Using JavaScript, HTML, and CSS, I created a custom webpage that showcases diffe
   - Webpage Filter Using Button [index_module.html](index_challenge.html)
   - Webpage Filter Using Search Bars [index_challenge.html](index_challenge.html)
 
-** Webpage Preview **
+**Webpage Preview**
 ![Webpage Preview](static_challenge/images/webpage_preview.PNG)
 
 ## Challange Project Summary
