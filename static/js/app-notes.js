@@ -85,7 +85,7 @@ function buildTable(data) {
     // Step 7. Build the table when the page loads it will create a basic table filled with row upon row of unfiltered data pulled straight from our array          
 function handleClick() {
     // Grab the datetime value from the filter
-    let date = d3.select("datatime").property("value");
+    let date = d3.select("#datatime").property("value");
     let filterData = tableData; // calls imported data from data.js
     // Check to see if a date was entered and filter the data using that date.
     if (date) {
