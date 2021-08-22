@@ -14,7 +14,7 @@
         crossorigin="anonymous"
     />
     <!--Add link to our stylesheet under Bootstrap's CDN link. Since we created a stylesheet and index.html file at the same time link to the style.css file that's in our css folder.-->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static_module/css/style.css">
 </head>
 <body class="bg-dark"> <!--We want to apply the same styling to the entire page, we can add a "bg-dark" class to our body element.-->
     <div class="wrapper"></div> <!-- wrapper class adds more functionality to Bootstrap by helping group elements(title, paragraph, table, and filters) & specifies the styling in our stylesheet.-->
@@ -87,8 +87,8 @@
     </div>
     <!--Tie the js code we did earlier by adding multiplle <script /> tags[order matters] then linking to the file's location.--> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script> <!--Adding the link to D3.js allows the library to "listen" in on our code, or react to user input -->
-    <script src="static/js/data.js"></script><!-- We linked todata.js next because the UFO sightings data needs to be loaded before it can be accessed, as we do in the app.js script-->
-    <script src="static/js/app.js"></script>
+    <script src="static_module/js/data.js"></script><!-- We linked todata.js next because the UFO sightings data needs to be loaded before it can be accessed, as we do in the app.js script-->
+    <script src="static_module/js/app.js"></script>
 </body>
 </html>
 <!-- -->
