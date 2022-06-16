@@ -1,4 +1,4 @@
-# Module 11: Using Javascipt to Create UFO Sightings Webpage
+# Using Javascipt to Create UFO Sightings Webpage
 ## Resources
 
 - **Data Source:** [data.js](static_challenge/js/data.js)
